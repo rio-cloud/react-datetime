@@ -26,6 +26,7 @@ export default class Datetime extends React.Component {
 		initialViewMode: TYPES.oneOf([viewModes.YEARS, viewModes.MONTHS, viewModes.DAYS, viewModes.TIME]),
 		onOpen: TYPES.func,
 		onClose: TYPES.func,
+		onClear: TYPES.func,
 		onChange: TYPES.func,
 		onNavigate: TYPES.func,
 		onBeforeNavigate: TYPES.func,
@@ -57,9 +58,10 @@ export default class Datetime extends React.Component {
 		onClose: nofn,
 		onCalendarOpen: nofn,
 		onCalendarClose: nofn,
+		onClear: nofn,
 		onChange: nofn,
 		onNavigate: nofn,
-		onBeforeNavigate: function(next) { return next; }, 
+		onBeforeNavigate: function(next) { return next; },
 		onNavigateBack: nofn,
 		onNavigateForward: nofn,
 		dateFormat: true,
@@ -88,7 +90,17 @@ export default class Datetime extends React.Component {
 	render() {
 		return (
 			<ClickableWrapper className={ this.getClassName() } onClickOut={ this._handleClickOutside }>
-				{ this.renderInput() }
+				<div className="ClearableInput input-group">
+					<span className="input-group-addon">
+						<span className="rioglyph rioglyph-calendar" aria-hidden="true"></span>
+					</span>
+					<div className="ClearableInput input-group">
+						{ this.renderInput() }
+						<span className="clearButton" onClick={ this._onInputClear }>
+							<span className="clearButtonIcon rioglyph rioglyph-remove-sign"></span>
+						</span>
+					</div>
+				</div>
 				<div className="rdtPicker">
 					{ this.renderView() }
 				</div>
@@ -110,7 +122,7 @@ export default class Datetime extends React.Component {
 			onClick: this._onInputClick
 		};
 
-		if ( this.props.renderInput ) {   
+		if ( this.props.renderInput ) {
 			return (
 				<div>
 					{ this.props.renderInput( finalInputProps, this._openCalendar, this._closeCalendar ) }
@@ -149,18 +161,18 @@ export default class Datetime extends React.Component {
 				// { viewDate, selectedDate, renderYear, isValidDate, navigate, showView, updateDate }
 				viewProps.renderYear = props.renderYear;
 				return <YearsView {...viewProps } />;
-			
+
 			case viewModes.MONTHS:
 				// { viewDate, selectedDate, renderMonth, isValidDate, navigate, showView, updateDate }
 				viewProps.renderMonth = props.renderMonth;
 				return <MonthsView {...viewProps} />;
-			
+
 			case viewModes.DAYS:
-				// { viewDate, selectedDate, renderDay, isValidDate, navigate, showView, updateDate, timeFormat 
+				// { viewDate, selectedDate, renderDay, isValidDate, navigate, showView, updateDate, timeFormat
 				viewProps.renderDay = props.renderDay;
 				viewProps.timeFormat = this.getFormat('time');
 				return <DaysView {...viewProps} />;
-			
+
 			default:
 				// { viewDate, selectedDate, timeFormat, dateFormat, timeConstraints, setTime, showView }
 				viewProps.dateFormat = this.getFormat('date');
@@ -186,7 +198,7 @@ export default class Datetime extends React.Component {
 			inputValue: this.getInitialInputValue( selectedDate )
 		};
 	}
-	
+
 	getInitialViewDate( selectedDate ) {
 		const propDate = this.props.initialViewDate;
 		let viewDate;
@@ -251,7 +263,7 @@ export default class Datetime extends React.Component {
 
 		return cn;
 	}
-	
+
 	isOpen() {
 		return !this.props.input || (this.props.open === undefined ? this.state.open : this.props.open);
 	}
@@ -305,7 +317,7 @@ export default class Datetime extends React.Component {
 		else if ( type === 'time' ) {
 			return this.getTimeFormat();
 		}
-		
+
 		let dateFormat = this.getDateFormat();
 		let timeFormat = this.getTimeFormat();
 		return dateFormat && timeFormat ? dateFormat + ' ' + timeFormat : (dateFormat || timeFormat );
@@ -369,7 +381,7 @@ export default class Datetime extends React.Component {
 
 	_viewNavigate = ( modifier, unit ) => {
 		let viewDate = this.state.viewDate.clone();
-		
+
 		// Subtracting is just adding negative time
 		viewDate.add( modifier, unit );
 
@@ -382,10 +394,10 @@ export default class Datetime extends React.Component {
 
 		this.setState({viewDate});
 	}
-	
+
 	_setTime = ( type, value ) => {
 		let date = (this.getSelectedDate() || this.state.viewDate).clone();
-		
+
 		date[ type ]( value );
 
 		if ( !this.props.value ) {
@@ -492,7 +504,7 @@ export default class Datetime extends React.Component {
 		if ( selectedDate && selectedDate.isValid() ) {
 			update.inputValue = selectedDate.format( this.getFormat('datetime') );
 		}
-		
+
 		this.setState( update );
 	}
 
@@ -506,16 +518,16 @@ export default class Datetime extends React.Component {
 		const props = this.props;
 		if ( props.inputProps.value )
 			return props.inputProps.value;
-		
+
 		if ( selectedDate && selectedDate.isValid() )
 			return selectedDate.format( this.getFormat('datetime') );
-		
+
 		if ( props.value && typeof props.value === 'string' )
 			return props.value;
-		
+
 		if ( props.initialValue && typeof props.initialValue === 'string' )
 			return props.initialValue;
-		
+
 		return '';
 	}
 
@@ -537,7 +549,7 @@ export default class Datetime extends React.Component {
 		};
 
 		if ( !date ) return logError();
-		
+
 		let viewDate;
 		if ( typeof date === 'string' ) {
 			viewDate = this.localMoment(date, this.getFormat('datetime') );
@@ -552,7 +564,7 @@ export default class Datetime extends React.Component {
 
 	/**
 	 * Set the view currently shown by the calendar. View modes shipped with react-datetime are 'years', 'months', 'days' and 'time'.
-	 * @param TYPES.string mode 
+	 * @param TYPES.string mode
 	 */
 	navigate( mode ) {
 		this._showView( mode );
@@ -580,6 +592,19 @@ export default class Datetime extends React.Component {
 
 		this.setState( update, () => {
 			this.props.onChange( localMoment.isValid() ? localMoment : this.state.inputValue );
+		});
+	}
+
+	_onInputClear = e => {
+		if ( !this.callHandler( this.props.inputProps.onClear, e ) ) return;
+
+		let clear = {
+			inputValue: '',
+			selectedDate: undefined
+		};
+
+		this.setState( clear, () => {
+			this.props.onClear();
 		});
 	}
 

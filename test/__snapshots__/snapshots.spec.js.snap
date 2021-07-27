@@ -4,15 +4,39 @@ exports[`className: set to arbitraty value 1`] = `
 <div
   className="rdt arbitrary-value"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -498,15 +522,39 @@ exports[`dateFormat set to false 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -602,15 +650,39 @@ exports[`dateFormat set to true 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -1096,15 +1168,39 @@ exports[`defaultValue: set to arbitrary value 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -1590,15 +1686,39 @@ exports[`everything default: renders correctly 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -2085,6 +2205,30 @@ exports[`input input: set to false 1`] = `
   className="rdt rdtStatic rdtOpen"
 >
   <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
+  <div
     className="rdtPicker"
   >
     <div
@@ -2569,15 +2713,39 @@ exports[`input input: set to true 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -3063,15 +3231,39 @@ exports[`inputProps with className specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="arbitrary-className"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="arbitrary-className"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -3557,16 +3749,40 @@ exports[`inputProps with disabled specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    disabled={true}
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        disabled={true}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -4052,16 +4268,40 @@ exports[`inputProps with name specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    name="arbitrary-name"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        name="arbitrary-name"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -4547,16 +4787,40 @@ exports[`inputProps with placeholder specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    placeholder="arbitrary-placeholder"
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="arbitrary-placeholder"
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -5042,16 +5306,40 @@ exports[`inputProps with required specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    required={true}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -5537,15 +5825,39 @@ exports[`isValidDate: only valid if after yesterday 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -6006,15 +6318,39 @@ exports[`open set to false 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -6500,15 +6836,39 @@ exports[`open set to true 1`] = `
 <div
   className="rdt rdtOpen"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -6994,15 +7354,39 @@ exports[`renderDay: specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -7488,15 +7872,39 @@ exports[`renderMonth: specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -7982,15 +8390,39 @@ exports[`renderYear: specified 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -8476,15 +8908,39 @@ exports[`timeFormat set to false 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -8959,15 +9415,39 @@ exports[`timeFormat set to true 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -9453,15 +9933,39 @@ exports[`value: set to arbitrary value 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -9947,15 +10451,39 @@ exports[`viewMode set to days 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -10441,15 +10969,39 @@ exports[`viewMode set to months 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -10935,15 +11487,39 @@ exports[`viewMode set to time 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >
@@ -11429,15 +12005,39 @@ exports[`viewMode set to years 1`] = `
 <div
   className="rdt"
 >
-  <input
-    className="form-control"
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    type="text"
-    value=""
-  />
+  <div
+    className="ClearableInput input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      <span
+        aria-hidden="true"
+        className="rioglyph rioglyph-calendar"
+      />
+    </span>
+    <div
+      className="ClearableInput input-group"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="clearButton"
+        onClick={[Function]}
+      >
+        <span
+          className="clearButtonIcon rioglyph rioglyph-remove-sign"
+        />
+      </span>
+    </div>
+  </div>
   <div
     className="rdtPicker"
   >

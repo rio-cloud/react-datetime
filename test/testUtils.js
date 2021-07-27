@@ -132,7 +132,7 @@ module.exports = {
 	},
 
 	getInputValue: (datetime) => {
-		return datetime.find('.rdt > .form-control').getDOMNode().value;
+		return datetime.find('.rdt > .input-group > .input-group > .form-control').getDOMNode().value;
 	},
 
 	getViewDateValue: (datetime) => {
