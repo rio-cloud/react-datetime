@@ -90,9 +90,19 @@ export default class Datetime extends React.Component {
 	}
 
 	render() {
+
+		var minWidthValues = {};
+
+		if (this.props.minWidth) {
+			minWidthValues = {
+				width: `${this.props.minWidth}px`,
+				maxWidth: '100%'
+			};
+		}
+
 		return (
 			<ClickableWrapper className={ this.getClassName() } onClickOut={ this._handleClickOutside }>
-				<div className="input-group" style={{ minWidth: `${this.props.minWidth}px`}}>
+				<div className="input-group" style={ minWidthValues }>
 					<span className="input-group-addon">
 						<span className="rioglyph rioglyph-calendar" aria-hidden="true"></span>
 					</span>
