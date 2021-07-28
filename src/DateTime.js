@@ -26,7 +26,6 @@ export default class Datetime extends React.Component {
 		initialViewMode: TYPES.oneOf([viewModes.YEARS, viewModes.MONTHS, viewModes.DAYS, viewModes.TIME]),
 		onOpen: TYPES.func,
 		onClose: TYPES.func,
-		onClear: TYPES.func,
 		onChange: TYPES.func,
 		onNavigate: TYPES.func,
 		onBeforeNavigate: TYPES.func,
@@ -44,6 +43,7 @@ export default class Datetime extends React.Component {
 		isValidDate: TYPES.func,
 		open: TYPES.bool,
 		strictParsing: TYPES.bool,
+		clearableInput: TYPES.bool,
 		closeOnSelect: TYPES.bool,
 		closeOnTab: TYPES.bool,
 		renderView: TYPES.func,
@@ -51,6 +51,7 @@ export default class Datetime extends React.Component {
 		renderDay: TYPES.func,
 		renderMonth: TYPES.func,
 		renderYear: TYPES.func,
+		minWidth: TYPES.number,
 	}
 
 	static defaultProps = {
@@ -58,7 +59,6 @@ export default class Datetime extends React.Component {
 		onClose: nofn,
 		onCalendarOpen: nofn,
 		onCalendarClose: nofn,
-		onClear: nofn,
 		onChange: nofn,
 		onNavigate: nofn,
 		onBeforeNavigate: function(next) { return next; },
@@ -68,11 +68,13 @@ export default class Datetime extends React.Component {
 		timeFormat: true,
 		utc: false,
 		className: '',
+		minWidth: 0,
 		input: true,
 		inputProps: {},
 		timeConstraints: {},
 		isValidDate: function() { return true; },
 		strictParsing: true,
+		clearableInput: false,
 		closeOnSelect: false,
 		closeOnTab: true,
 		closeOnClickOutside: true,
@@ -90,15 +92,13 @@ export default class Datetime extends React.Component {
 	render() {
 		return (
 			<ClickableWrapper className={ this.getClassName() } onClickOut={ this._handleClickOutside }>
-				<div className="ClearableInput input-group">
+				<div className="input-group" style={{ minWidth: `${this.props.minWidth}px`}}>
 					<span className="input-group-addon">
 						<span className="rioglyph rioglyph-calendar" aria-hidden="true"></span>
 					</span>
 					<div className="ClearableInput input-group">
 						{ this.renderInput() }
-						<span className="clearButton" onClick={ this._onInputClear }>
-							<span className="clearButtonIcon rioglyph rioglyph-remove-sign"></span>
-						</span>
+						{ this.renderClearButton() }
 					</div>
 				</div>
 				<div className="rdtPicker">
@@ -106,6 +106,18 @@ export default class Datetime extends React.Component {
 				</div>
 			</ClickableWrapper>
 		);
+	}
+
+	renderClearButton() {
+		if ( !this.props.clearableInput ) return;
+
+		if ( this.props.clearableInput ) {
+			return (
+				<span className="clearButton" onClick={ this._onInputClear }>
+					<span className="clearButtonIcon rioglyph rioglyph-remove-sign"></span>
+				</span>
+			);
+		}
 	}
 
 	renderInput() {
@@ -596,16 +608,14 @@ export default class Datetime extends React.Component {
 	}
 
 	_onInputClear = e => {
-		if ( !this.callHandler( this.props.inputProps.onClear, e ) ) return;
+		if ( !this.callHandler( this.props.inputProps.clearableInput, e ) ) return;
 
 		let clear = {
 			inputValue: '',
 			selectedDate: undefined
 		};
 
-		this.setState( clear, () => {
-			this.props.onClear();
-		});
+		this.setState( clear );
 	}
 
 	_onInputKeyDown = e => {

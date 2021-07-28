@@ -5,7 +5,12 @@ exports[`className: set to arbitraty value 1`] = `
   className="rdt arbitrary-value"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -27,14 +32,6 @@ exports[`className: set to arbitraty value 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -523,7 +520,12 @@ exports[`dateFormat set to false 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -545,14 +547,6 @@ exports[`dateFormat set to false 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -651,7 +645,12 @@ exports[`dateFormat set to true 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -673,14 +672,6 @@ exports[`dateFormat set to true 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -1169,7 +1160,12 @@ exports[`defaultValue: set to arbitrary value 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -1191,14 +1187,6 @@ exports[`defaultValue: set to arbitrary value 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -1687,7 +1675,12 @@ exports[`everything default: renders correctly 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -1709,14 +1702,6 @@ exports[`everything default: renders correctly 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -2205,7 +2190,12 @@ exports[`input input: set to false 1`] = `
   className="rdt rdtStatic rdtOpen"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -2217,16 +2207,7 @@ exports[`input input: set to false 1`] = `
     </span>
     <div
       className="ClearableInput input-group"
-    >
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
-    </div>
+    />
   </div>
   <div
     className="rdtPicker"
@@ -2714,7 +2695,12 @@ exports[`input input: set to true 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -2736,14 +2722,6 @@ exports[`input input: set to true 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -3232,7 +3210,12 @@ exports[`inputProps with className specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -3254,14 +3237,6 @@ exports[`inputProps with className specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -3750,7 +3725,12 @@ exports[`inputProps with disabled specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -3773,14 +3753,6 @@ exports[`inputProps with disabled specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -4269,7 +4241,12 @@ exports[`inputProps with name specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -4292,14 +4269,6 @@ exports[`inputProps with name specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -4788,7 +4757,12 @@ exports[`inputProps with placeholder specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -4811,14 +4785,6 @@ exports[`inputProps with placeholder specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -5307,7 +5273,12 @@ exports[`inputProps with required specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -5330,14 +5301,6 @@ exports[`inputProps with required specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -5826,7 +5789,12 @@ exports[`isValidDate: only valid if after yesterday 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -5848,14 +5816,6 @@ exports[`isValidDate: only valid if after yesterday 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -6319,7 +6279,12 @@ exports[`open set to false 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -6341,14 +6306,6 @@ exports[`open set to false 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -6837,7 +6794,12 @@ exports[`open set to true 1`] = `
   className="rdt rdtOpen"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -6859,14 +6821,6 @@ exports[`open set to true 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -7355,7 +7309,12 @@ exports[`renderDay: specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -7377,14 +7336,6 @@ exports[`renderDay: specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -7873,7 +7824,12 @@ exports[`renderMonth: specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -7895,14 +7851,6 @@ exports[`renderMonth: specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -8391,7 +8339,12 @@ exports[`renderYear: specified 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -8413,14 +8366,6 @@ exports[`renderYear: specified 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -8909,7 +8854,12 @@ exports[`timeFormat set to false 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -8931,14 +8881,6 @@ exports[`timeFormat set to false 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -9416,7 +9358,12 @@ exports[`timeFormat set to true 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -9438,14 +9385,6 @@ exports[`timeFormat set to true 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -9934,7 +9873,12 @@ exports[`value: set to arbitrary value 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -9956,14 +9900,6 @@ exports[`value: set to arbitrary value 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -10452,7 +10388,12 @@ exports[`viewMode set to days 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -10474,14 +10415,6 @@ exports[`viewMode set to days 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -10970,7 +10903,12 @@ exports[`viewMode set to months 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -10992,14 +10930,6 @@ exports[`viewMode set to months 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -11488,7 +11418,12 @@ exports[`viewMode set to time 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -11510,14 +11445,6 @@ exports[`viewMode set to time 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div
@@ -12006,7 +11933,12 @@ exports[`viewMode set to years 1`] = `
   className="rdt"
 >
   <div
-    className="ClearableInput input-group"
+    className="input-group"
+    style={
+      Object {
+        "minWidth": "0px",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -12028,14 +11960,6 @@ exports[`viewMode set to years 1`] = `
         type="text"
         value=""
       />
-      <span
-        className="clearButton"
-        onClick={[Function]}
-      >
-        <span
-          className="clearButtonIcon rioglyph rioglyph-remove-sign"
-        />
-      </span>
     </div>
   </div>
   <div

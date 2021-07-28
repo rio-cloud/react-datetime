@@ -52,12 +52,12 @@ declare namespace ReactDatetimeClass {
          */
         initialViewMode?: ViewMode;
         /*
-         In the calendar we can navigate through years and months without actualling updating the selected view. Only 
-         when we get to one view called the "updating view", we make a selection there and the value gets updated, 
-         triggering an `onChange` event. 
-         By default the updating view will get guessed by using the `dateFormat` so if our dates only show months 
-         and never days, the update is done in the `months` view. If we set `updateOnView="time"` selecting a day 
-         will navigate to the time view. The time view always updates the selected date, never navigates. 
+         In the calendar we can navigate through years and months without actualling updating the selected view. Only
+         when we get to one view called the "updating view", we make a selection there and the value gets updated,
+         triggering an `onChange` event.
+         By default the updating view will get guessed by using the `dateFormat` so if our dates only show months
+         and never days, the update is done in the `months` view. If we set `updateOnView="time"` selecting a day
+         will navigate to the time view. The time view always updates the selected date, never navigates.
          If `closeOnSelect={ true }`, making a selection in the view defined by `updateOnView` will close the calendar.
         */
         updateOnView?: string;
@@ -114,15 +114,19 @@ declare namespace ReactDatetimeClass {
          */
         onClose?: EventOrValueHandler<FocusEvent<any>>;
         /*
+         Shows a clear input button.
+         */
+        clearableInput?: boolean;
+        /*
          Callback trigger when the view mode changes. The callback receives the selected view mode
          string ('years', 'months', 'days', 'time') as only parameter.
          */
         onNavigate?: (viewMode: string) => void;
         /*
-         Allows to intercept a change of the calendar view. The accepted function receives the view 
-         that it's supposed to navigate to, the view that is showing currently and the date currently 
-         shown in the view. Return a viewMode ( default ones are `years`, `months`, `days` or `time`) to 
-         navigate to it. If the function returns a "falsy" value, the navigation is stopped and we will 
+         Allows to intercept a change of the calendar view. The accepted function receives the view
+         that it's supposed to navigate to, the view that is showing currently and the date currently
+         shown in the view. Return a viewMode ( default ones are `years`, `months`, `days` or `time`) to
+         navigate to it. If the function returns a "falsy" value, the navigation is stopped and we will
          remain in the current view.
          */
         onBeforeNavigate?: (nextView: string, currentView: string, viewDate: Moment) => string;
@@ -136,6 +140,10 @@ declare namespace ReactDatetimeClass {
          The callback receives the amount and type ('month', 'year') as parameters.
          */
         onNavigateForward?: (amount: number, type: string) => void;
+        /*
+         min-width as a style attr.
+         */
+        minWidth?: number;
         /*
          Extra class names for the component markup.
          */
