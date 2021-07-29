@@ -625,7 +625,9 @@ export default class Datetime extends React.Component {
 			selectedDate: undefined
 		};
 
-		this.setState( clear );
+		this.setState( clear, () => {
+			this.props.onChange( '' );
+		} );
 	}
 
 	_onInputKeyDown = e => {
