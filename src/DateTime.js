@@ -617,15 +617,15 @@ export default class Datetime extends React.Component {
 		});
 	}
 
-	_onInputClear = e => {
-		if ( !this.callHandler( this.props.inputProps.clearableInput, e ) ) return;
-
+	_onInputClear = () => {
 		let clear = {
 			inputValue: '',
 			selectedDate: undefined
 		};
 
-		this.setState( clear );
+		this.setState( clear, () => {
+			this.props.onChange( '' );
+		} );
 	}
 
 	_onInputKeyDown = e => {
