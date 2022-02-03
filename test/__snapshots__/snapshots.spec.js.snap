@@ -6,7 +6,11 @@ exports[`className: set to arbitraty value 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -517,7 +521,11 @@ exports[`dateFormat set to false 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -638,7 +646,11 @@ exports[`dateFormat set to true 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -1149,7 +1161,11 @@ exports[`defaultValue: set to arbitrary value 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -1660,7 +1676,11 @@ exports[`everything default: renders correctly 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -2171,7 +2191,11 @@ exports[`input input: set to false 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -2672,7 +2696,11 @@ exports[`input input: set to true 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -3183,7 +3211,11 @@ exports[`inputProps with className specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -3694,7 +3726,11 @@ exports[`inputProps with disabled specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -4206,7 +4242,11 @@ exports[`inputProps with name specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -4718,7 +4758,11 @@ exports[`inputProps with placeholder specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -5230,7 +5274,11 @@ exports[`inputProps with required specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -5742,7 +5790,11 @@ exports[`isValidDate: only valid if after yesterday 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -6228,7 +6280,11 @@ exports[`open set to false 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -6739,7 +6795,11 @@ exports[`open set to true 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -7250,7 +7310,11 @@ exports[`renderDay: specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -7761,7 +7825,11 @@ exports[`renderMonth: specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -8272,7 +8340,11 @@ exports[`renderYear: specified 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -8783,7 +8855,11 @@ exports[`timeFormat set to false 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -9283,7 +9359,11 @@ exports[`timeFormat set to true 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -9794,7 +9874,11 @@ exports[`value: set to arbitrary value 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -10305,7 +10389,11 @@ exports[`viewMode set to days 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -10816,7 +10904,11 @@ exports[`viewMode set to months 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -11327,7 +11419,11 @@ exports[`viewMode set to time 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"
@@ -11838,7 +11934,11 @@ exports[`viewMode set to years 1`] = `
 >
   <div
     className="input-group"
-    style={Object {}}
+    style={
+      Object {
+        "maxWidth": "100%",
+      }
+    }
   >
     <span
       className="input-group-addon"

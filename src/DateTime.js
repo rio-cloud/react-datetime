@@ -90,14 +90,12 @@ export default class Datetime extends React.Component {
 	}
 
 	render() {
+		const minWidthValues = {
+			maxWidth: '100%'
+		};
 
-		var minWidthValues = {};
-
-		if (this.props.minWidth) {
-			minWidthValues = {
-				width: `${this.props.minWidth}px`,
-				maxWidth: '100%'
-			};
+		if (this.props.minWidth !== 0) {
+			minWidthValues.width = `${this.props.minWidth}px`;
 		}
 
 		return (
