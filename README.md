@@ -1,7 +1,8 @@
-# react-datetime
+# @rio-cloud/react-datetime
 
-[![Build Status](https://secure.travis-ci.org/arqex/react-datetime.svg)](https://travis-ci.org/arqex/react-datetime)
-[![npm version](https://badge.fury.io/js/react-datetime.svg)](http://badge.fury.io/js/react-datetime)
+A fork of the original [react-datetime](https://github.com/arqex/react-datetime) library.
+
+---
 
 A date and time picker in the same React.js component. It can be used as a datepicker, timepicker or both at the same time. It is **highly customizable** and it even allows to edit date's milliseconds.
 
@@ -13,12 +14,12 @@ A date and time picker in the same React.js component. It can be used as a datep
 
 Install using npm:
 ```sh
-npm install --save react-datetime
+npm install --save @rio-cloud/react-datetime
 ```
 
 Install using yarn:
 ```sh
-yarn add react-datetime
+yarn add @rio-cloud/react-datetime
 ```
 
 ## Usage
@@ -27,7 +28,7 @@ yarn add react-datetime
 
 ```js
 // Import the library
-import Datetime from 'react-datetime';
+import Datetime from '@rio-cloud/react-datetime';
 
 // return it from your components
 return <Datetime />;
@@ -39,7 +40,7 @@ Do you want more examples? [Have a look at our resources gallery](resources.md).
 **Don't forget to add the [CSS stylesheet](https://github.com/arqex/react-datetime/blob/master/css/react-datetime.css) to make it work out of the box.**. You only need to do this once in your app:
 
 ```js
-import "react-datetime/css/react-datetime.css";
+import "@rio-cloud/react-datetime/css/react-datetime.css";
 ```
 
 ## API
@@ -283,7 +284,7 @@ required.
 Typings for 1.8 are found in `react-datetime.d.ts` and typings for 2.0 are found in `typings/index.d.ts`.
 
 ```js
-import * as Datetime from 'react-datetime';
+import * as Datetime from '@rio-cloud/react-datetime';
 
 class MyDTPicker extends React.Component<MyDTPickerProps, MyDTPickerState> {
     render() JSX.Element {

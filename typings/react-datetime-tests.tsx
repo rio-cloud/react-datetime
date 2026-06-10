@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Moment } from "moment";
 import * as moment from "moment";
-import * as ReactDatetime from "react-datetime";
+import * as ReactDatetime from "@rio-cloud/react-datetime";
 
 /*
  Test the datetime picker.

@@ -8,7 +8,7 @@
         "baseUrl": "../",
         "lib": ["es6"],
         "paths": {
-            "react-datetime": ["./"]
+            "@rio-cloud/react-datetime": ["./"]
         }
     },
     "files": [

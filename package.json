@@ -1,18 +1,22 @@
 {
-  "name": "react-datetime",
+  "name": "@rio-cloud/react-datetime",
   "version": "3.1.1",
-  "description": "A lightweight but complete datetime picker React.js component",
-  "homepage": "https://github.com/arqex/react-datetime",
+  "description": "A fork of the lightweight but complete datetime picker React.js component",
+  "homepage": "https://github.com/rio-cloud/react-datetime",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arqex/react-datetime"
+    "url": "git+https://github.com/rio-cloud/react-datetime.git"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
   "main": "./dist/react-datetime.cjs.js",
   "typings": "./typings/DateTime.d.ts",
   "files": [
     "css",
     "dist",
-    "typings"
+    "typings/DateTime.d.ts"
   ],
   "scripts": {
     "build": "webpack --config config/webpack.config.build.js",
