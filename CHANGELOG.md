@@ -1,5 +1,12 @@
 Changelog
 =========
+## 3.2.0
+* Adds support for React 19 while retaining React 18 support.
+* Replaces `react-onclickoutside` with native document event listeners, avoiding the removed `findDOMNode` API.
+* Replaces the Enzyme/Jest test suite with Vitest and React Testing Library.
+* Uses React's modern JSX runtime and provides dedicated ESM and CommonJS package builds.
+* Fixes Moment.js interoperability in modern bundlers such as Vite.
+
 ## 3.1.0
 * Adds support for React 17
 

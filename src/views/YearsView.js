@@ -68,12 +68,15 @@ export default class YearsView extends React.Component {
 			className += ' rdtActive';
 		}
 
-		let props = {key: year, className, 'data-value': year, onClick };
+		let props = {className, 'data-value': year, onClick };
 
-		return this.props.renderYear(
-			props,
-			year,
-			this.props.selectedDate && this.props.selectedDate.clone()
+		return React.cloneElement(
+			this.props.renderYear(
+				props,
+				year,
+				this.props.selectedDate && this.props.selectedDate.clone()
+			),
+			{ key: year }
 		);
 	}
 

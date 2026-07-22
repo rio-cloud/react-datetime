@@ -7,33 +7,33 @@ import * as ReactDatetime from "@rio-cloud/react-datetime";
  Test the datetime picker.
  */
 
-const TEST_BASIC_USAGE: JSX.Element = <ReactDatetime />;
+const TEST_BASIC_USAGE: React.ReactElement = <ReactDatetime />;
 
 /*
  Test date properties
  */
 
-const TEST_DATE_PROPS_FOR_VALUE: JSX.Element = <ReactDatetime
+const TEST_DATE_PROPS_FOR_VALUE: React.ReactElement = <ReactDatetime
 		value={ new Date() }
 	/>;
 
-const TEST_DATE_PROPS_FOR_DEFAULT_VALUE: JSX.Element = <ReactDatetime
+const TEST_DATE_PROPS_FOR_DEFAULT_VALUE: React.ReactElement = <ReactDatetime
 		initialValue={ new Date() }
 	/>;
 
-const TEST_DATE_PROPS_FOR_VALUE_AS_MOMENT: JSX.Element = <ReactDatetime
+const TEST_DATE_PROPS_FOR_VALUE_AS_MOMENT: React.ReactElement = <ReactDatetime
 		value={ moment() }
 	/>;
 
-const TEST_DATE_PROPS_FOR_VALUE_AS_STRING: JSX.Element = <ReactDatetime
+const TEST_DATE_PROPS_FOR_VALUE_AS_STRING: React.ReactElement = <ReactDatetime
 		value={ '1995-12-25' }
 	/>;
 
-const TEST_DATE_PROPS_FOR_DEFAULT_VALUE_AS_MOMENT: JSX.Element = <ReactDatetime
+const TEST_DATE_PROPS_FOR_DEFAULT_VALUE_AS_MOMENT: React.ReactElement = <ReactDatetime
 		initialValue={ moment() }
 	/>;
 
-const TEST_DATE_PROPS_FOR_DEFAULT_VALUE_AS_STRING: JSX.Element = <ReactDatetime
+const TEST_DATE_PROPS_FOR_DEFAULT_VALUE_AS_STRING: React.ReactElement = <ReactDatetime
 		initialValue={ '1995-12-25' }
 	/>;
 
@@ -41,12 +41,12 @@ const TEST_DATE_PROPS_FOR_DEFAULT_VALUE_AS_STRING: JSX.Element = <ReactDatetime
  Test formats
  */
 
-const TEST_FORMAT_PROPS_AS_STRINGS: JSX.Element = <ReactDatetime
+const TEST_FORMAT_PROPS_AS_STRINGS: React.ReactElement = <ReactDatetime
 		dateFormat='mm/dd/yyyy'
 		timeFormat='hh:mm:ss'
 	/>;
 
-const TEST_FORMAT_PROPS_AS_BOOLEANS: JSX.Element = <ReactDatetime
+const TEST_FORMAT_PROPS_AS_BOOLEANS: React.ReactElement = <ReactDatetime
 		dateFormat={ false }
 		timeFormat={ false }
 	/>;
@@ -55,7 +55,7 @@ const TEST_FORMAT_PROPS_AS_BOOLEANS: JSX.Element = <ReactDatetime
  Test boolean options
  */
 
-const TEST_BOOLEAN_PROPS: JSX.Element = <ReactDatetime
+const TEST_BOOLEAN_PROPS: React.ReactElement = <ReactDatetime
 		input={ false }
 		open={ false }
 		strictParsing={ false }
@@ -68,7 +68,7 @@ const TEST_BOOLEAN_PROPS: JSX.Element = <ReactDatetime
  Test locale options
  */
 
-const TEST_LOCALE_PROPS: JSX.Element = <ReactDatetime
+const TEST_LOCALE_PROPS: React.ReactElement = <ReactDatetime
 		locale='en-us'
 	/>;
 
@@ -76,7 +76,7 @@ const TEST_LOCALE_PROPS: JSX.Element = <ReactDatetime
  Test input props
  */
 
-const TEST_INPUT_PROPS: JSX.Element = <ReactDatetime
+const TEST_INPUT_PROPS: React.ReactElement = <ReactDatetime
 		inputProps={
 			{
 				'placeholder': 'mm/dd/yyyy'
@@ -88,30 +88,30 @@ const TEST_INPUT_PROPS: JSX.Element = <ReactDatetime
  Test Event handlers
  */
 
- const TEST_EVENT_HANDLERS_WITH_STRINGS: JSX.Element = <ReactDatetime
- 		onChange={
- 			(momentOrInputString:string) => {}
- 		}
+const TEST_EVENT_HANDLERS_WITH_STRINGS: React.ReactElement = <ReactDatetime
+		onChange={
+			(momentOrInputString:string | Moment) => {}
+		}
 		onOpen={
 			() => {}
 		}
 		onClose={
-			(momentOrInputString:string) => {}
+			(momentOrInputString:string | Moment | React.FocusEvent<any>) => {}
 		}
 		onNavigate={
- 			(initialViewMode:string) => {}
+			(initialViewMode:string) => {}
 		}
 		onBeforeNavigate={
 			(nextView:string, currentView:string, viewDate: any ) => { return 'ok' }
 		}
- 	/>;
+	/>;
 
-const TEST_EVENT_HANDLERS_WITH_MOMENT: JSX.Element = <ReactDatetime
+const TEST_EVENT_HANDLERS_WITH_MOMENT: React.ReactElement = <ReactDatetime
 		onChange={
-			(momentOrInputString:Moment) => {}
+			(momentOrInputString:Moment | string) => {}
 		}
 		onClose={
-			(momentOrInputString:Moment) => {}
+			(momentOrInputString:Moment | string | React.FocusEvent<any>) => {}
 		}
 	/>;
 
@@ -119,7 +119,7 @@ const TEST_EVENT_HANDLERS_WITH_MOMENT: JSX.Element = <ReactDatetime
  Test view mode and className
  */
 
-const TEST_VIEW_MODE_AND_CLASS_PROPS: JSX.Element = <ReactDatetime
+const TEST_VIEW_MODE_AND_CLASS_PROPS: React.ReactElement = <ReactDatetime
 		initialViewMode='days'
 		className='rdt'
 	/>;
@@ -128,7 +128,7 @@ const TEST_VIEW_MODE_AND_CLASS_PROPS: JSX.Element = <ReactDatetime
  Test date validator
  */
 
-const TEST_DATE_VALIDATOR_PROP: JSX.Element = <ReactDatetime
+const TEST_DATE_VALIDATOR_PROP: React.ReactElement = <ReactDatetime
 		isValidDate={ (currentDate:any, selectedDate:any) => {
 			return true;
 		} }
@@ -138,7 +138,7 @@ const TEST_DATE_VALIDATOR_PROP: JSX.Element = <ReactDatetime
  Test customizable components
  */
 
-const TEST_CUSTOMIZABLE_COMPONENT_PROPS: JSX.Element = <ReactDatetime
+const TEST_CUSTOMIZABLE_COMPONENT_PROPS: React.ReactElement = <ReactDatetime
 		renderDay={ (props: any, currentDate: any, selectedDate: any) => {
 			return <td {...props}>{ '0' + currentDate.date() }</td>;
 		} }
@@ -160,11 +160,11 @@ const TEST_CUSTOMIZABLE_COMPONENT_PROPS: JSX.Element = <ReactDatetime
  Test time constraints.
  */
 
-const TEST_BASIC_TIME_CONSTRAINTS: JSX.Element = <ReactDatetime
+const TEST_BASIC_TIME_CONSTRAINTS: React.ReactElement = <ReactDatetime
 		timeConstraints={ {} }
 	/>;
 
-const TEST_TIME_CONSTRAINTS_WITH_ONE: JSX.Element = <ReactDatetime
+const TEST_TIME_CONSTRAINTS_WITH_ONE: React.ReactElement = <ReactDatetime
 		timeConstraints={ {
 			'hours': {
 				'min': 0,
@@ -174,7 +174,7 @@ const TEST_TIME_CONSTRAINTS_WITH_ONE: JSX.Element = <ReactDatetime
 		} }
 	/>;
 
-const TEST_TIME_CONSTRAINTS_WITH_ALL: JSX.Element = <ReactDatetime
+const TEST_TIME_CONSTRAINTS_WITH_ALL: React.ReactElement = <ReactDatetime
 		timeConstraints={ {
 			'hours': {
 				'min': 0,

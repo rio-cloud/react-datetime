@@ -5,7 +5,6 @@ import DaysView from './views/DaysView';
 import MonthsView from './views/MonthsView';
 import YearsView from './views/YearsView';
 import TimeView from './views/TimeView';
-import onClickOutside from 'react-onclickoutside';
 
 const viewModes = {
 	YEARS: 'years',
@@ -19,6 +18,8 @@ const nofn = function () {};
 const datetype = TYPES.oneOfType([ TYPES.instanceOf(moment), TYPES.instanceOf(Date), TYPES.string ]);
 
 export default class Datetime extends React.Component {
+	container = React.createRef();
+
 	static propTypes = {
 		value: datetype,
 		initialValue: datetype,
@@ -99,7 +100,7 @@ export default class Datetime extends React.Component {
 		}
 
 		return (
-			<ClickableWrapper className={ this.getClassName() } onClickOut={ this._handleClickOutside }>
+			<div className={ this.getClassName() } ref={ this.container }>
 				<div className="input-group" style={ minWidthValues }>
 					<span className="input-group-addon">
 						<span className="rioglyph rioglyph-calendar" aria-hidden="true"></span>
@@ -112,8 +113,19 @@ export default class Datetime extends React.Component {
 				<div className="rdtPicker">
 					{ this.renderView() }
 				</div>
-			</ClickableWrapper>
+			</div>
 		);
+	}
+
+	componentDidMount() {
+		this.ownerDocument = this.container.current.ownerDocument;
+		this.ownerDocument.addEventListener('mousedown', this._handleDocumentEvent);
+		this.ownerDocument.addEventListener('touchstart', this._handleDocumentEvent);
+	}
+
+	componentWillUnmount() {
+		this.ownerDocument.removeEventListener('mousedown', this._handleDocumentEvent);
+		this.ownerDocument.removeEventListener('touchstart', this._handleDocumentEvent);
 	}
 
 	renderClearButton() {
@@ -452,6 +464,15 @@ export default class Datetime extends React.Component {
 		}
 	}
 
+	_handleDocumentEvent = event => {
+		const container = this.container.current;
+		const eventPath = typeof event.composedPath === 'function' ? event.composedPath() : [];
+
+		if ( container && !container.contains(event.target) && !eventPath.includes(container) ) {
+			this._handleClickOutside();
+		}
+	}
+
 	localMoment( date, format, props ) {
 		props = props || this.props;
 		let m = null;
@@ -628,7 +649,7 @@ export default class Datetime extends React.Component {
 	_onInputKeyDown = e => {
 		if ( !this.callHandler( this.props.inputProps.onKeyDown, e ) ) return;
 
-		if ( e.which === 9 && this.props.closeOnTab ) {
+		if ( (e.key === 'Tab' || e.which === 9) && this.props.closeOnTab ) {
 			this._closeCalendar();
 		}
 	}
@@ -656,24 +677,3 @@ function log( message, method ) {
 	}
 	con[ method ]( '***react-datetime:' + message );
 }
-
-class ClickOutBase extends React.Component {
-	container = React.createRef();
-
-	render() {
-		return (
-			<div className={ this.props.className } ref={ this.container }>
-				{ this.props.children }
-			</div>
-		);
-	}
-	handleClickOutside(e) {
-		this.props.onClickOut( e );
-	}
-
-	setClickOutsideRef() {
-		return this.container.current;
-	}
-}
-
-const ClickableWrapper = onClickOutside( ClickOutBase );

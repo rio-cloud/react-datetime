@@ -24,7 +24,7 @@ yarn add @rio-cloud/react-datetime
 
 ## Usage
 
-[React.js](http://facebook.github.io/react/) and [Moment.js](http://momentjs.com/) are peer dependencies for react-datetime (as well as [Moment.js timezones](https://momentjs.com/timezone/) if you want to use the `displayTimeZone` prop). These dependencies are not installed along with react-datetime automatically, but your project needs to have them installed in order to make the datepicker work. You can then use the datepicker like in the example below.
+[React.js](http://facebook.github.io/react/) and [Moment.js](http://momentjs.com/) are peer dependencies for react-datetime (as well as [Moment.js timezones](https://momentjs.com/timezone/) if you want to use the `displayTimeZone` prop). React 18 and React 19 are both supported. These dependencies are not installed along with react-datetime automatically, but your project needs to have them installed in order to make the datepicker work. You can then use the datepicker like in the example below.
 
 ```js
 // Import the library

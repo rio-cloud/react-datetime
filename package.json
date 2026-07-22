@@ -1,6 +1,6 @@
 {
   "name": "@rio-cloud/react-datetime",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "A fork of the lightweight but complete datetime picker React.js component",
   "homepage": "https://github.com/rio-cloud/react-datetime",
   "repository": {
@@ -12,23 +12,35 @@
     "access": "public"
   },
   "main": "./dist/react-datetime.cjs.js",
+  "module": "./dist/react-datetime.esm.mjs",
   "typings": "./typings/DateTime.d.ts",
+  "exports": {
+    ".": {
+      "types": "./typings/DateTime.d.ts",
+      "import": "./dist/react-datetime.esm.mjs",
+      "require": "./dist/react-datetime.cjs.js",
+      "default": "./dist/react-datetime.esm.mjs"
+    },
+    "./css/*": "./css/*",
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
   "files": [
     "css",
     "dist",
     "typings/DateTime.d.ts"
   ],
   "scripts": {
-    "build": "webpack --config config/webpack.config.build.js",
+    "build": "vite build --config vite.build.config.mjs --mode es && vite build --config vite.build.config.mjs --mode cjs && vite build --config vite.build.config.mjs --mode umd",
     "lint": "eslint src/DateTime.js test/ && echo 'Linting OK! 💪'",
     "notify-pre-commit-hook": "echo '### Starting pre-commit hook 🦄'",
     "playground": "node scripts/start.js",
-    "test": "jest",
+    "prepack": "npm run test:all && npm run lint && npm run build && npm run test:dist",
+    "test": "vitest run",
+    "test:dist": "node scripts/test-dist.js",
     "test:typings": "tsc -p ./typings",
-    "test:snapshot": "jest snapshot",
-    "test:snapshot:update": "jest snapshot --updateSnapshot",
     "test:all": "echo 'Running tests...' && npm run test:typings && npm run test && echo 'All tests passed! 🤘'",
-    "test:watch": "jest --watch"
+    "test:watch": "vitest"
   },
   "keywords": [
     "react",
@@ -42,7 +54,7 @@
   "license": "MIT",
   "peerDependencies": {
     "moment": "^2.16.0",
-    "react": "^16.5.0 || ^17.0.0 || ^18.0.0"
+    "react": "^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.7.4",
@@ -50,14 +62,14 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "@svgr/webpack": "4.3.3",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/react": "^16.5.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "babel-eslint": "10.0.3",
-    "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
     "babel-plugin-named-asset-import": "^0.3.5",
     "camelcase": "^5.3.1",
@@ -65,8 +77,6 @@
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.1.0",
     "eslint-loader": "3.0.2",
@@ -78,12 +88,7 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.5",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "24.9.0",
-    "jest-environment-jsdom-fourteen": "0.1.0",
-    "jest-resolve": "24.9.0",
-    "jest-watch-typeahead": "0.4.2",
-    "jsdom": "^7.0.2",
+    "jsdom": "^26.0.0",
     "mini-css-extract-plugin": "0.8.0",
     "moment": "^2.16.0",
     "moment-timezone": "^0.5.13",
@@ -95,12 +100,10 @@
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
     "pre-commit": "^1.1.3",
-    "react": "^16.5.0",
+    "react": "^18.3.1",
     "react-app-polyfill": "^1.0.5",
     "react-dev-utils": "10.1.0",
-    "react-dom": "^16.5.0",
-    "react-onclickoutside": "^6.9.0",
-    "react-test-renderer": "^16.5.0",
+    "react-dom": "^18.3.1",
     "resolve": "1.12.2",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.0",
@@ -109,8 +112,10 @@
     "terser-webpack-plugin": "4.2.1",
     "through2": "^2.0.3",
     "ts-pnp": "1.1.5",
-    "typescript": "^3.7.4",
+    "typescript": "^5.7.3",
     "url-loader": "2.3.0",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5",
     "webpack": "4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "3.11.0",
@@ -125,55 +130,6 @@
     "lint",
     "test:all"
   ],
-  "jest": {
-    "roots": [
-      "<rootDir>/test"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/playground/**",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [],
-    "testMatch": [
-      "<rootDir>/test/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/test/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

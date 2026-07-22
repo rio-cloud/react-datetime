@@ -5,8 +5,9 @@
 //                 Karol Janyst <http://github.com/LKay>,
 //                 Javier Marquez <javi@arqex.com>
 
-import { Component, ChangeEvent, FocusEvent, FocusEventHandler } from 'react';
-import { Moment } from 'moment';
+import { Component } from 'react';
+import type { FocusEvent, FocusEventHandler, HTMLProps, ReactElement } from 'react';
+import type { Moment } from 'moment';
 
 export = ReactDatetimeClass;
 
@@ -147,11 +148,11 @@ declare namespace ReactDatetimeClass {
         /*
          Extra class names for the component markup.
          */
-        className?: string;
+        className?: string | string[];
         /*
          Defines additional attributes for the input element of the component.
          */
-        inputProps?: React.HTMLProps<HTMLInputElement>;
+        inputProps?: HTMLProps<HTMLInputElement>;
         /*
          Define the dates that can be selected. The function receives (currentDate, selectedDate)
          and should return a true or false whether the currentDate is valid or not. See selectable dates.
@@ -163,33 +164,33 @@ declare namespace ReactDatetimeClass {
          view of react-datetime, this way it's possible to wrap the original view adding our own markup or
          override it completely with our own code.
         */
-        renderView?: (viewMode: string, renderCalendar: Function) => JSX.Element;
+        renderView?: (viewMode: string, renderCalendar: Function) => ReactElement;
         /*
          Customize the way that the days are shown in the day picker. The accepted function has
          the selectedDate, the current date and the default calculated props for the cell,
          and must return a React component. See appearance customization
          */
-        renderDay?: (props: any, currentDate: any, selectedDate: any) => JSX.Element;
+        renderDay?: (props: any, currentDate: any, selectedDate: any) => ReactElement;
         /*
          Customize the way that the months are shown in the month picker.
          The accepted function has the selectedDate, the current date and the default calculated
          props for the cell, the month and the year to be shown, and must return a
          React component. See appearance customization
          */
-        renderMonth?: (props: any, month: number, year: number, selectedDate: any) => JSX.Element;
+        renderMonth?: (props: any, month: number, year: number, selectedDate: any) => ReactElement;
         /*
          Customize the way that the years are shown in the year picker.
          The accepted function has the selectedDate, the current date and the default calculated
          props for the cell, the year to be shown, and must return a React component.
          See appearance customization
          */
-        renderYear?: (props: any, year: number, selectedDate: any) => JSX.Element;
+        renderYear?: (props: any, year: number, selectedDate: any) => ReactElement;
         /*
          Replace the rendering of the input element. The accepted function has openCalendar
          (a function which opens the calendar) and the default calculated props for the input.
          Must return a React component or null.
          */
-        renderInput?: (props: any, openCalendar: Function, closeCalendar: Function) => JSX.Element;
+        renderInput?: (props: any, openCalendar: Function, closeCalendar: Function) => ReactElement | null;
         /*
          Whether to use moment's strict parsing when parsing input.
          */
@@ -198,6 +199,10 @@ declare namespace ReactDatetimeClass {
          When true, once the day has been selected, the react-datetime will be automatically closed.
          */
         closeOnSelect?: boolean;
+        /*
+         When true, pressing Tab while the input is focused closes the picker.
+         */
+        closeOnTab?: boolean;
         /*
          Allow to add some constraints to the time selector. It accepts an object with the format
          {hours:{ min: 9, max: 15, step:2}} so the hours can't be lower than 9 or higher than 15, and

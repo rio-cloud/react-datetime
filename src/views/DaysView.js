@@ -81,8 +81,8 @@ export default class DaysView extends React.Component {
 	renderDay( date, startOfMonth, endOfMonth ) {
 		let selectedDate = this.props.selectedDate;
 
+		const key = date.format('M_D');
 		let dayProps = {
-			key: date.format('M_D'),
 			'data-value': date.date(),
 			'data-month': date.month(),
 			'data-year': date.year()
@@ -111,8 +111,9 @@ export default class DaysView extends React.Component {
 
 		dayProps.className = className;
 
-		return this.props.renderDay(
-			dayProps, date.clone(), selectedDate && selectedDate.clone()
+		return React.cloneElement(
+			this.props.renderDay(dayProps, date.clone(), selectedDate && selectedDate.clone()),
+			{ key }
 		);
 	}
 

@@ -64,19 +64,22 @@ export default class MonthsView extends React.Component {
 			className += ' rdtActive';
 		}
 
-		let props = {key: month, className, 'data-value': month, onClick };
+		let props = {className, 'data-value': month, onClick };
 
 		if ( this.props.renderMonth ) {
-			return this.props.renderMonth(
-				props,
-				month,
-				this.props.viewDate.year(),
-				this.props.selectedDate && this.props.selectedDate.clone()
+			return React.cloneElement(
+				this.props.renderMonth(
+					props,
+					month,
+					this.props.viewDate.year(),
+					this.props.selectedDate && this.props.selectedDate.clone()
+				),
+				{ key: month }
 			);
 		}
 
 		return (
-			<td { ...props }>
+			<td key={ month } { ...props }>
 				{ this.getMonthText( month ) }
 			</td>
 		);
